@@ -2,18 +2,43 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    Center(
-      child: Container(
-        color: Colors.redAccent,
-        padding: EdgeInsets.all(20.0),
-        child: Text(
-          'World Hello',
+    ColoredBox(
+      color: Colors.yellow,
+      child: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            // Culoare de fundal albă, dar cu opacitate de 20% (efect de transparență/sticlă)
+            color: Colors.redAccent.withOpacity(0.2),
 
-          textDirection: TextDirection.ltr,
-          style: TextStyle(
-            color: Colors.white,
-            letterSpacing: 20.0,
-            fontSize: 60.0,
+            // Colțuri rotunjite cu o rază de 20 de pixeli
+            borderRadius: BorderRadius.circular(20.0),
+
+            // O bordură fină care ajută la evidențierea efectului de transparență
+            border: Border.all(
+              color: Colors.red.withOpacity(0.3),
+              width: 1.5,
+            ),
+
+            // Umbra din spatele containerului pentru a-i da profunzime (efect 3D)
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 10.0,
+                offset: const Offset(0, 4), // Mută umbra puțin în jos
+              ),
+            ],
+          ),
+
+          padding: EdgeInsets.all(20.0),
+          child: Text(
+            'World Hello',
+
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+              color: Colors.black,
+              letterSpacing: 20.0,
+              fontSize: 60.0,
+            ),
           ),
         ),
       ),
