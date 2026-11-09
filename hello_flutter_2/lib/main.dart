@@ -10,15 +10,18 @@ void main() {
   final joke = builtInJokes[currentJokeIndex];
 
   runApp(
-    Center(
-      child: Padding(
-        padding: const EdgeInsets.all(40.0),
-        child: Text(
-          joke,
-          textDirection: TextDirection.ltr,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 60.0,
+    ColoredBox(
+      color: joke.color,
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(40.0),
+          child: Text(
+            '${joke.text}',
+            textDirection: TextDirection.ltr,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 60.0,
+            ),
           ),
         ),
       ),
