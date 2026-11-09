@@ -16,7 +16,7 @@ void main() {
         child: Padding(
           padding: const EdgeInsets.all(40.0),
           child: Text(
-            '${joke.text}',
+            '${joke.text}\r\n\r\n${joke.colorReason}',
             textDirection: TextDirection.ltr,
             textAlign: TextAlign.center,
             style: TextStyle(
