@@ -10,9 +10,14 @@ void main() {
   final joke = builtInJokes[currentJokeIndex];
 
   runApp(
-    Text(
-      joke,
-      textDirection: TextDirection.ltr,
+    Center(
+      child: Text(
+        joke,
+        textDirection: TextDirection.ltr,
+        style: TextStyle(
+          fontSize: 60.0,
+        ),
+      ),
     ),
   );
 }
