@@ -11,11 +11,15 @@ void main() {
 
   runApp(
     Center(
-      child: Text(
-        joke,
-        textDirection: TextDirection.ltr,
-        style: TextStyle(
-          fontSize: 60.0,
+      child: Padding(
+        padding: const EdgeInsets.all(40.0),
+        child: Text(
+          joke,
+          textDirection: TextDirection.ltr,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 60.0,
+          ),
         ),
       ),
     ),
